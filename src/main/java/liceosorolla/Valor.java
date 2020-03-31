@@ -1,6 +1,6 @@
 package main.java.liceosorolla;
 
-public enum Cartas {
+public enum Valor {
 	K,
 	Q,
 	J,
