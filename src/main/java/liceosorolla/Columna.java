@@ -1,14 +1,7 @@
 package main.java.liceosorolla;
 
-public enum Columna {
-	uno,
-	dos,
-	tres,
-	cuatro,
-	cinco,
-	seis,
-	siete,
-	ocho,
-	nueve,
-	diez
+import java.util.ArrayList;
+
+public class Columna {
+	private ArrayList<Carta> Cartas;
 }
