@@ -9,14 +9,18 @@ public class Start {
 		Tablero tablero = new Tablero();
 		int opcion=0;
 		Scanner teclado= new Scanner(System.in);
+		
+		//menu
 		while(opcion!=3) {
 			String frase="¿Elige un numero segun lo que quieras hacer:\n1.Sacar nuevas cartas de la baraja\n2.Mover cartas de una columna a otra\n3.Acabar el juego";
 			opcion=compruebaInt(frase);
 			switch(opcion) {
 			case 1:
+				//pasar cartas de la baraja al tablero(10 cartas)
 				
 				break;
 			case 2:
+				//mover cartas de una columna a otra
 				
 				break;
 			case 3:
