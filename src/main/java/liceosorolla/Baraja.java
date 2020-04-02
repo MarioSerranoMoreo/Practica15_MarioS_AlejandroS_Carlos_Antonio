@@ -1,11 +1,10 @@
 package main.java.liceosorolla;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Baraja {
 	
-	private ArrayList<Carta> cartas;
+	private ArrayList<Carta> cartas= new ArrayList<>();
 	
 
 	public Baraja() {
@@ -24,7 +23,7 @@ public class Baraja {
 	private void generarCarta() {
 		for (int i=0; i<8; i++) {
 			for(Valor valor: Valor.values()) {
-				cartas.add(new Carta(false, valor));
+				cartas.add(new Carta(true, valor));
 			}
 		}
 	}

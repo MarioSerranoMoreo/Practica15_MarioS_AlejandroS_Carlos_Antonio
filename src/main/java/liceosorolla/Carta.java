@@ -4,7 +4,6 @@ public class Carta {
 	private boolean bocaArriba;
 	private Valor valor;
 	public Carta(boolean bocaArriba, Valor valor) {
-		super();
 		this.bocaArriba = bocaArriba;
 		this.valor = valor;
 	}
