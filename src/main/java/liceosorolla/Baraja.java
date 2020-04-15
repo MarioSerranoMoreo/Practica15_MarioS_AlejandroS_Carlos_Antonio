@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Baraja {
 	
-	private ArrayList<Carta> cartas= new ArrayList<>();
+	private ArrayList<Carta> cartas = new ArrayList<>();
 	
 
 	public Baraja() {
@@ -34,15 +34,15 @@ public class Baraja {
 		
 		while(!cartas.isEmpty()) {
 			
-			int x = sacarCarta(cartas.size());
+			int x = sacarCarta();
 			carta2.add(cartas.get(x));
 			cartas.remove(x);
 		}
 		cartas=carta2;
 	}
 	
-	private int sacarCarta(int cartas) {
-		int numero = (int) (Math.random() * cartas);
+	public int sacarCarta() {
+		int numero = (int) (Math.random() * cartas.size());
 		return numero;
 	}
 }

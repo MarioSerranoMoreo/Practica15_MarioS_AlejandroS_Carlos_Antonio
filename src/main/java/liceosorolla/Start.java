@@ -8,6 +8,9 @@ public class Start {
 		Baraja baraja = new Baraja();
 		Tablero tablero = new Tablero();
 		int opcion=0;
+		for(int i=0;i<baraja.getCartas().size();i++) {
+			System.out.println(baraja.getCartas().get(i));
+		}
 		Scanner teclado= new Scanner(System.in);
 		
 		//menu
