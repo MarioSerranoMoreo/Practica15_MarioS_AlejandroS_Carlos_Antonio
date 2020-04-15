@@ -7,6 +7,18 @@ public class Start {
 	public static void main(String[] args) {
 		Baraja baraja = new Baraja();
 		Tablero tablero = new Tablero();
+		int numero=0;
+		int columna=0;
+		Carta suplente;
+		while(numero<54) {
+			if(columna<=8) {
+				suplente=baraja.getCartas().get(baraja.sacarCarta());
+				columna++;
+			}else {
+				columna=0;
+			}
+			numero++;
+		}
 		int opcion=0;
 		for(int i=0;i<baraja.getCartas().size();i++) {
 			System.out.println(baraja.getCartas().get(i));
