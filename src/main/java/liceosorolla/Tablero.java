@@ -11,5 +11,15 @@ public class Tablero {
 		columnas.get(columna).getCartas().add(carta);
 		
 	}
+	
+	public Tablero() {
+		iniciarTablero();	
+		}
 
+	private void iniciarTablero() {
+		ArrayList <Carta> cartas = new ArrayList<Carta>();
+		for(int i=0;i<8;i++) {
+			columnas.add(new Columna(cartas));
+		}
+	}
 }
