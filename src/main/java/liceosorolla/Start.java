@@ -8,23 +8,26 @@ public class Start {
 		Baraja baraja = new Baraja();
 		Tablero tablero = new Tablero();
 		int numero=0;
-		int columna=1;
+		int numeroCarta=0;
+		int columna=0;
 		Carta suplente;
 		while(numero<54) {
-			if(columna<8) {
-				suplente=baraja.getCartas().get(baraja.sacarCarta());
-				System.out.println(columna);
+			if(columna<10) {
+				numeroCarta=baraja.sacarCarta();
+				suplente=baraja.getCartas().get(numeroCarta);
+				baraja.getCartas().remove(numeroCarta);
 				tablero.meterCarta(columna,suplente);
 				columna++;
+				numero++;
 			}else {
-				columna=1;
+				columna=0;
 			}
-			numero++;
 		}
+		tablero.imprimirTablero();
 		int opcion=0;
-		for(int i=0;i<baraja.getCartas().size();i++) {
+		/*for(int i=0;i<baraja.getCartas().size();i++) {
 			System.out.println(baraja.getCartas().get(i));
-		}
+		}*/
 		Scanner teclado= new Scanner(System.in);
 		
 		//menu

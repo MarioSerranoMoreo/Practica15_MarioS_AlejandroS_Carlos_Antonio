@@ -3,7 +3,7 @@ package main.java.liceosorolla;
 import java.util.ArrayList;
 
 public class Columna {
-	private ArrayList<Carta> cartas;
+	private ArrayList<Carta> cartas=new ArrayList<>();
 	
 	public ArrayList<Carta> getCartas() {
 		return cartas;
@@ -37,5 +37,9 @@ public class Columna {
 		}
 		
 		return devolver;
+	}
+	
+	public void agregarCarta(Carta nuevaCarta) {
+		cartas.add(nuevaCarta);
 	}
 }
