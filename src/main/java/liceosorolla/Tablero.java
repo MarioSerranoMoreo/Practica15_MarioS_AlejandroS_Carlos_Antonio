@@ -8,8 +8,6 @@ public class Tablero {
 	
 	public void meterCarta(int columna, Carta carta) {
 		columnas.get(columna).agregarCarta(carta);
-		System.out.println(columna+" g "+carta);
-		System.out.println(columnas.get(columna).getCartas().size());
 	}
 	
 	public Tablero() {
@@ -17,9 +15,9 @@ public class Tablero {
 	}
 
 	private void iniciarTablero() {
-		ArrayList <Carta> cartas = new ArrayList<Carta>();
+		
 		for(int i=0;i<10;i++) {
-			columnas.add(new Columna(cartas));
+			columnas.add(new Columna());
 		}
 	}
 
@@ -33,22 +31,22 @@ public class Tablero {
 	private int calcularColumnaLarga() {
 		int columnaLarga=0;
 		for(int i=0;i<getColumnas().size()-1;i++) {
-			System.out.println(columnas.get(i).getCartas().size()+"B");
-			System.out.println(columnas.get(i).getCartas()+"C");
 			if(getColumnas().get(i).getCartas().size()>columnaLarga) {
 				columnaLarga=getColumnas().get(i).getCartas().size();
 			}
 		}
-		System.out.println(columnaLarga);
 		return columnaLarga;
 	}
 	public void imprimirTablero() {
-		int columnaLarga=calcularColumnaLarga();;
-		System.out.println(columnaLarga);
+		int columnaLarga=calcularColumnaLarga();
 		for(int i=0;i<columnaLarga;i++) {
 			for(int j=0;j<10;j++) {
-				//System.out.println(getColumnas().get(j).getCartas().get(i)+"A");
+				if(getColumnas().get(j).getCartas().size()>i){
+					//System.out.println(getColumnas().get(j).getCartas().size()+ " H");
+					System.out.print(getColumnas().get(j).getCartas().get(i).getValor()+" ");
+				}
 			}
+			System.out.println("");
 		}
 	}
 }

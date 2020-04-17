@@ -12,8 +12,8 @@ public class Columna {
 		this.cartas = cartas;
 	}
 	
-	public Columna(ArrayList<Carta> cartas) {
-		this.cartas = cartas;
+	public Columna() {
+		
 	}
 	
 	public String toString() {

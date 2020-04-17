@@ -32,7 +32,7 @@ public class Start {
 		
 		//menu
 		while(opcion!=3) {
-			String frase="ï¿½Elige un numero segun lo que quieras hacer:\n1.Sacar nuevas cartas de la baraja\n2.Mover cartas de una columna a otra\n3.Acabar el juego";
+			String frase="¿Elige un numero segun lo que quieras hacer:\n1.Sacar nuevas cartas de la baraja\n2.Mover cartas de una columna a otra\n3.Acabar el juego";
 			opcion=compruebaInt(frase);
 			switch(opcion) {
 			case 1:
