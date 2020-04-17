@@ -6,9 +6,9 @@ public class Tablero {
 	
 	private ArrayList<Columna> columnas;
 	
-	public void meterCarta(int columna, boolean bool, Valor valor) {
+	public void meterCarta(int columna, Carta carta) {
 	  
-		columnas.get(columna).getCartas().add(new Carta(bool,valor));
+		columnas.get(columna).getCartas().add(carta);
 		
 	}
 

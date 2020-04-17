@@ -8,14 +8,16 @@ public class Start {
 		Baraja baraja = new Baraja();
 		Tablero tablero = new Tablero();
 		int numero=0;
-		int columna=0;
+		int columna=1;
 		Carta suplente;
 		while(numero<54) {
-			if(columna<=8) {
+			if(columna<8) {
 				suplente=baraja.getCartas().get(baraja.sacarCarta());
+				System.out.println(columna);
+				tablero.meterCarta(columna,suplente);
 				columna++;
 			}else {
-				columna=0;
+				columna=1;
 			}
 			numero++;
 		}
