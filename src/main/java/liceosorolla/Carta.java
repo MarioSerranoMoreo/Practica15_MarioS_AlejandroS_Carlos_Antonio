@@ -26,19 +26,22 @@ public class Carta {
 	public void getOrdinal() {
 		switch(getValor().ordinal()+1) {
 		case 11:
-			System.out.print("J ");
+			System.out.print("  J ");
 			break;
 		case 12:
-			System.out.print("Q ");
+			System.out.print("  Q ");
 			break;
 		case 13:
-			System.out.print("K ");
+			System.out.print("  K ");
 			break;
-		/*case 1:
-			System.out.println("A");
-			break;*/
+		case 1:
+			System.out.print("  A ");
+			break;
+		case 10:
+			System.out.print(" 10 ");
+			break;
 		default:
-			System.out.print(getValor().ordinal()+1+" ");
+			System.out.print("  "+(getValor().ordinal()+1)+" ");
 			break;
 		}
 	}
