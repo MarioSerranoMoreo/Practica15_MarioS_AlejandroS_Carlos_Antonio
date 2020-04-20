@@ -1,17 +1,17 @@
 package main.java.liceosorolla;
 
 public enum Valor {
-	K,
-	Q,
-	J,
-	Diez,
-	Nueve,
-	Ocho,
-	Siete,
-	Seis,
-	Cinco,
-	Cuatro,
-	Tres,
+	As,
 	Dos,
-	As
+	Tres,
+	Cuatro,
+	Cinco,
+	Seis,
+	Siete,
+	Ocho,
+	Nueve,
+	Diez,
+	J,
+	Q,
+	K
 }

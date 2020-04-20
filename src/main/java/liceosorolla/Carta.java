@@ -23,4 +23,23 @@ public class Carta {
 	public String toString() {
 		return "Carta [bocaArriba=" + bocaArriba + ", valor=" + valor + "]";
 	}
+	public void getOrdinal() {
+		switch(getValor().ordinal()+1) {
+		case 11:
+			System.out.print("J ");
+			break;
+		case 12:
+			System.out.print("Q ");
+			break;
+		case 13:
+			System.out.print("K ");
+			break;
+		/*case 1:
+			System.out.println("A");
+			break;*/
+		default:
+			System.out.print(getValor().ordinal()+1+" ");
+			break;
+		}
+	}
 }

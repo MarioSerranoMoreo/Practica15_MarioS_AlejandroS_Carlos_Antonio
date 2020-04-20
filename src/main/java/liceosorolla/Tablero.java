@@ -43,7 +43,7 @@ public class Tablero {
 			for(int j=0;j<10;j++) {
 				if(getColumnas().get(j).getCartas().size()>i){
 					//System.out.println(getColumnas().get(j).getCartas().size()+ " H");
-					System.out.print(getColumnas().get(j).getCartas().get(i).getValor()+" ");
+					getColumnas().get(j).getCartas().get(i).getOrdinal();
 				}
 			}
 			System.out.println("");
