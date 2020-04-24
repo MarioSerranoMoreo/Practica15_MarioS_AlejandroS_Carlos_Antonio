@@ -22,7 +22,6 @@ public class Columna {
 	
 	public boolean comprobarCarta(int cantidad) {
 		boolean devolver=true;
-		int numero=0;
 		int valor1;
 		int valor2;
 		

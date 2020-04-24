@@ -15,6 +15,11 @@ public class Start {
 			if(columna<10) {
 				numeroCarta=baraja.sacarCarta();
 				suplente=baraja.getCartas().get(numeroCarta);
+				if(numero>=44) {
+					suplente.setBocaArriba(true);
+				}else {
+					suplente.setBocaArriba(false);
+				}
 				baraja.getCartas().remove(numeroCarta);
 				tablero.meterCarta(columna,suplente);
 				columna++;
@@ -23,7 +28,6 @@ public class Start {
 				columna=0;
 			}
 		}
-		tablero.imprimirTablero();
 		int opcion=0;
 		/*for(int i=0;i<baraja.getCartas().size();i++) {
 			System.out.println(baraja.getCartas().get(i));
@@ -32,12 +36,25 @@ public class Start {
 		
 		//menu
 		while(opcion!=3) {
+			tablero.imprimirTablero();
 			String frase="¿Elige un numero segun lo que quieras hacer:\n1.Sacar nuevas cartas de la baraja\n2.Mover cartas de una columna a otra\n3.Acabar el juego";
 			opcion=compruebaInt(frase);
 			switch(opcion) {
 			case 1:
 				//pasar cartas de la baraja al tablero(10 cartas)
-				
+				columna=0;
+				if(!baraja.getCartas().isEmpty()) {
+					while(columna<10) {
+							numeroCarta=baraja.sacarCarta();
+							suplente=baraja.getCartas().get(numeroCarta);
+							suplente.setBocaArriba(true);
+							baraja.getCartas().remove(numeroCarta);
+							tablero.meterCarta(columna,suplente);
+							columna++;
+					}
+				}else {
+					System.out.println("No quedan mas cartas en la baraja");
+				}
 				break;
 			case 2:
 				//mover cartas de una columna a otra
