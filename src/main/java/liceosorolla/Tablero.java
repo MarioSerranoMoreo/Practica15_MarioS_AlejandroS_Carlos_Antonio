@@ -48,5 +48,12 @@ public class Tablero {
 			}
 			System.out.println("");
 		}
+
 	}
-}
+	public void anadeCartas(int columna, Carta nuevaCarta) {
+		columnas.get(columna).getCartas().add(nuevaCarta);
+	}
+
+	}
+	
+
