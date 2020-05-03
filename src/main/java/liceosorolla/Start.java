@@ -35,6 +35,7 @@ public class Start {
 		Scanner teclado= new Scanner(System.in);
 		
 		//menu
+		System.out.println(tablero.getColumnas().get(1).comprobarCarta(1));
 		while(opcion!=3) {
 			tablero.imprimirTablero();
 			String frase="¿Elige un numero segun lo que quieras hacer:\n1.Sacar nuevas cartas de la baraja\n2.Mover cartas de una columna a otra\n3.Acabar el juego";
@@ -58,7 +59,7 @@ public class Start {
 				break;
 			case 2:
 				//mover cartas de una columna a otra
-				
+				tablero.moverCartas();
 				break;
 			case 3:
 				 System.out.println("Adios");
